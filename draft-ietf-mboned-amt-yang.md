@@ -28,19 +28,19 @@ author:
     fullname: Yisong Liu
     organization: China Mobile
     email: liuyisong@chinamobile.com
-  -
+
     fullname: Changwang Lin
     organization: New H3C Technologies
     email: linchangwang.04414@h3c.com
-  -
+
     fullname: Zheng(Sandy) Zhang
     organization: ZTE Corporation
     email: zhang.zheng@zte.com.cn
-  -
+
     fullname: Xuesong Geng
     organization: Huawei Technologies
     email:  gengxuesong@huawei.com
-  -
+
     fullname: Vinod Kumar Nagaraj
     organization: Juniper Networks
     email:  vinkumar@juniper.net
