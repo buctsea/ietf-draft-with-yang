@@ -14,6 +14,7 @@ workgroup: MBONED Working Group
 keyword:
  - YANG
  - AMT
+
 venue:
   group: MBONED
   type: Working Group
@@ -173,7 +174,7 @@ informative:
 
 # Terminology & Notation Conventions
 
-##  Conventions Used in This Document
+## Conventions Used in This Document
 
    The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
    "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
@@ -181,7 +182,7 @@ informative:
    14 [RFC2119] [RFC8174] when, and only when, they appear in all
    capitals, as shown here.
 
-##  Terminology
+## Terminology
 
    The terminology for describing YANG data models is found in [RFC6020]
    and [RFC7950], including:
@@ -240,12 +241,12 @@ informative:
       Relay to compute Response MAC values, according to Section 5.3.6
       of [RFC7450].
 
-##  Tree Diagrams
+## Tree Diagrams
 
    Tree diagrams used in this document follow the notation defined in
    [RFC8340].
 
-#  Data Model Overview
+# Data Model Overview
 
    The AMT protocol mainly includes two components illustrated in
    Figure 1.  The two components are Relay and Gateway entities, each
@@ -296,9 +297,9 @@ informative:
 
    *  DNS Resource Record (RR) used by an AMT relay service.
 
-#  AMT YANG Module
+# AMT YANG Module
 
-##  Prefixes
+## Prefixes
 
    Table 1 summarizes the prefixes used in this document.
 ```mermaid
@@ -319,12 +320,12 @@ informative:
                   Table 1: Prefixes and Corresponding YANG
                                   Modules
 ```
-##  Tree View
+## Tree View
 
    The full tree diagram of the "ietf-amt" YANG module is represented in
    Appendix A.  The following subsections list the subtree structures.
 
-###  Overall Structure
+### Overall Structure
 
    The overall tree structure of the AMT YANG module is shown in
    Figure 2.
@@ -365,7 +366,7 @@ informative:
    device implements the amt-gateway feature, typically on enterprise
    edge routers or customer premises equipment (CPE).
 
-###  Relay
+### Relay
 
    The structure of 'relay' is shown in Figure 3.
 
@@ -522,7 +523,7 @@ informative:
    checksum'), and the current number of timed-out gateways because of
    inactivity ('gateways-timed-out').
 
-###  Gateway
+### Gateway
 
    The structure of 'gateway' is shown in Figure 4.
 
@@ -615,7 +616,7 @@ informative:
    ('membership-update'), and the number of AMT teardown messages sent
    ('teardown').
 
-##  YANG Module
+## YANG Module
 
    This document imports modules defined in [RFC9911], [RFC8294],
    [RFC8343], and [RFC8349].
@@ -1471,7 +1472,7 @@ informative:
    RFC Ed.: Please replace all occurrences of 'XXXX' with the actual RFC
    number (and remove this note).
 
-##  IETF XML Registry
+## IETF XML Registry
 
    IANA is requested to register the following URI in the "ns" registry
    within the "IETF XML Registry" group [RFC3688]:
@@ -1480,7 +1481,7 @@ informative:
    Registrant Contact:  The IESG.
    XML:  N/A; the requested URI is an XML namespace.
 ```
-##  YANG Module Names Registry
+## YANG Module Names Registry
 
    IANA is requested to register the following YANG module in the "YANG
    Module Names" registry [RFC6020] within the "YANG Parameters"
@@ -1494,7 +1495,7 @@ informative:
 ```
 --- back
 
-#  Appendix A.  Full Tree
+# Appendix A.  Full Tree
 
 ```yang
    module: ietf-amt
@@ -1605,7 +1606,7 @@ informative:
                    +--ro membership-update yang:zero-based-counter64
                    +--ro teardown          yang:zero-based-counter64
 ```
-#  Appendix B.  Data Model Example
+# Appendix B.  Data Model Example
 
    This section presents a simple and illustrative example of how to
    configure AMT.
