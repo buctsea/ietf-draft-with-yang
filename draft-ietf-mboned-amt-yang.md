@@ -1,24 +1,4 @@
----
-###
-# Internet-Draft Markdown Template
-#
-# Rename this file from draft-todo-yourname-protocol.md to get started.
-# Draft name format is "draft-<yourname>-<workgroup>-<name>.md".
-#
-# For initial setup, you only need to edit the first block of fields.
-# Only "title" needs to be changed; delete "abbrev" if your title is short.
-# Any other content can be edited, but be careful not to introduce errors.
-# Some fields will be set automatically during setup if they are unchanged.
-#
-# Don't include "-00" or "-latest" in the filename.
-# Labels in the form draft-<yourname>-<workgroup>-<name>-latest are used by
-# the tools to refer to the current version; see "docname" for example.
-#
-# This template uses kramdown-rfc: https://github.com/cabo/kramdown-rfc
-# You can replace the entire file if you prefer a different format.
-# Change the file extension to match the format (.xml for XML, etc...)
-#
-###
+
 title: "A YANG Data Model for Automatic Multicast Tunneling (AMT)"
 
 abbrev: "YANG Data Model for AMT"
@@ -29,9 +9,9 @@ docname: draft-ietf-mboned-amt-yang
 
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 
-number:06
+number: 06
 
-date:10 March 2026
+date: 10 March 2026
 
 consensus: true
 
@@ -48,15 +28,15 @@ keyword:
 venue:
 
   group: MBONED
-  
+
   type: Working Group
-  
+
   mail: mboned@ietf.org
-  
+
   arch: https://mailarchive.ietf.org/arch/browse/mboned/
-  
+
   github: buctsea/ietf-draft-with-yang
-  
+
   latest: https://datatracker.ietf.org/doc/draft-ietf-mboned-amt-yang/
 
 author:
@@ -66,19 +46,19 @@ author:
     organization: China Mobile
     email: liuyisong@chinamobile.com
  -
-	fullname: Changwang Lin
+    fullname: Changwang Lin
     organization: New H3C Technologies
     email: linchangwang.04414@h3c.com
  -
-	fullname: Zheng(Sandy) Zhang
+    fullname: Zheng(Sandy) Zhang
     organization: ZTE Corporation
     email: zhang.zheng@zte.com.cn
  -
-	fullname: Xuesong Geng
+    fullname: Xuesong Geng
     organization: Huawei Technologies
     email:  gengxuesong@huawei.com
  -
-	fullname: Vinod Kumar Nagaraj
+    fullname: Vinod Kumar Nagaraj
     organization: Juniper Networks
     email:  vinkumar@juniper.net
 
@@ -119,7 +99,7 @@ normative:
               Access Control Model", STD 91, RFC 8341,
               DOI 10.17487/RFC8341, March 2018,
               <https://www.rfc-editor.org/info/rfc8341>.
-			  
+
    [RFC8343]  Bjorklund, M., "A YANG Data Model for Interface
               Management", RFC 8343, DOI 10.17487/RFC8343, March 2018,
               <https://www.rfc-editor.org/info/rfc8343>.
@@ -167,7 +147,7 @@ informative:
    [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
               BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
               <https://www.rfc-editor.org/info/rfc8340>.
-			  
+
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/info/rfc8446>.
@@ -1683,3 +1663,37 @@ informative:
 
    Figure 6 shows the same example configuration for an AMT relay
    service in JSON format.
+
+   {
+     "config": {
+       "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
+       "routing": {
+         "@xmlns": "urn:ietf:params:xml:ns:yang:ietf-routing",
+         "control-plane-protocols": {
+           "amt": {
+             "@xmlns": "urn:ietf:params:xml:ns:yang:ietf-amt",
+             "relay": {
+               "addresses": {
+                 "address": [
+                   {
+                     "family": "ipv4",
+                     "anycast-prefix": "192.0.2.1/32",
+                     "local-address": "198.51.100.42"
+                   },
+                   {
+                     "family": "ipv6",
+                     "anycast-prefix": "2001:db8::1/128",
+                     "local-address": "2001:db8:abcd:12::42"
+                   }
+                 ]
+               },
+               "tunnel-limit": 10,
+               "secret-key-timeout": 120
+             }
+           }
+         }
+       }
+     }
+   }
+
+                    Figure 6: Data Model Example in JSON
