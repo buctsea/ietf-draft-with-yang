@@ -1,46 +1,28 @@
-
+---
 title: "A YANG Data Model for Automatic Multicast Tunneling (AMT)"
-
 abbrev: "YANG Data Model for AMT"
-
 category: std
 
 docname: draft-ietf-mboned-amt-yang
-
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
-
 number: 06
-
 date: 10 March 2026
-
 consensus: true
-
 v: 3
-
 area: General
-
 workgroup: MBONED Working Group
-
 keyword:
  - YANG
  - AMT
-
 venue:
-
   group: MBONED
-
   type: Working Group
-
   mail: mboned@ietf.org
-
   arch: https://mailarchive.ietf.org/arch/browse/mboned/
-
   github: buctsea/ietf-draft-with-yang
-
   latest: https://datatracker.ietf.org/doc/draft-ietf-mboned-amt-yang/
 
 author:
-
  -
     fullname: Yisong Liu
     organization: China Mobile
@@ -164,6 +146,8 @@ informative:
               xml-20081126, November 2008,
               <https://www.w3.org/TR/2008/REC-xml-20081126>.
 
+
+
 --- abstract
 
    This document defines a YANG data model for the management of
@@ -267,7 +251,7 @@ informative:
    Figure 1.  The two components are Relay and Gateway entities, each
    with their internal modules (Discovery, Tunnel Management, Multicast
    Forwarding).
-
+```mermaid
             +------------------------------------------------+
             |            AMT Protocol Components             |
             +------------------------------------------------+
@@ -292,7 +276,7 @@ informative:
             +------------------------------------------------+
 
                      Figure 1: AMT Protocol Components
-
+```
    The AMT data model provides methods for managing AMT protocol,
    covering all its core functional components as illustrated in
    Figure 1.  It includes:
@@ -317,7 +301,7 @@ informative:
 ##  Prefixes
 
    Table 1 summarizes the prefixes used in this document.
-
+```mermaid
                +==========+====================+===========+
                | Prefix   | YANG module        | Reference |
                +==========+====================+===========+
@@ -334,7 +318,7 @@ informative:
 
                   Table 1: Prefixes and Corresponding YANG
                                   Modules
-
+```
 ##  Tree View
 
    The full tree diagram of the "ietf-amt" YANG module is represented in
