@@ -252,7 +252,7 @@ informative:
    Figure 1.  The two components are Relay and Gateway entities, each
    with their internal modules (Discovery, Tunnel Management, Multicast
    Forwarding).
-```mermaid
+```
             +------------------------------------------------+
             |            AMT Protocol Components             |
             +------------------------------------------------+
@@ -302,7 +302,7 @@ informative:
 ## Prefixes
 
    Table 1 summarizes the prefixes used in this document.
-```mermaid
+```
                +==========+====================+===========+
                | Prefix   | YANG module        | Reference |
                +==========+====================+===========+
