@@ -349,6 +349,7 @@ informative:
    routing" specified in [RFC8349].  Specifically, the AMT YANG module
    augments "/rt:routing/rt:control-plane-protocols".
 
+```yang
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
@@ -356,7 +357,7 @@ informative:
           |  ...
           +--rw gateway {amt-gateway}?
              ...
-
+```
                     Figure 2: Overall AMT Tree Structure
 
    The 'amt' container encapsulates all AMT functionality and serves as
@@ -384,6 +385,7 @@ informative:
 
    The structure of 'relay' is shown in Figure 3.
 
+```yang
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
@@ -457,7 +459,7 @@ informative:
           |     +--ro discontinuity-time       yang:date-and-time
           +--rw gateway {amt-gateway}?
              ...
-
+```
                    Figure 3: AMT Relay Subtree Structure
 
    The 'relay' data nodes are described as follows:
@@ -540,6 +542,7 @@ informative:
 
    The structure of 'gateway' is shown in Figure 4.
 
+```yang
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
@@ -581,7 +584,7 @@ informative:
                    +--ro request           yang:zero-based-counter64
                    +--ro membership-update yang:zero-based-counter64
                    +--ro teardown          yang:zero-based-counter64
-
+```
                   Figure 4: AMT Gateway Subtree Structure
 
    The 'gateway' data nodes are described as follows:
@@ -1509,6 +1512,7 @@ informative:
 
 #  Appendix A.  Full Tree
 
+```yang
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
@@ -1616,7 +1620,7 @@ informative:
                    +--ro request           yang:zero-based-counter64
                    +--ro membership-update yang:zero-based-counter64
                    +--ro teardown          yang:zero-based-counter64
-
+```
 #  Appendix B.  Data Model Example
 
    This section presents a simple and illustrative example of how to
@@ -1633,6 +1637,7 @@ informative:
    AMT local address is configured to 198.51.100.42 for IPv4 and
    2001:db8:abcd:12::42 for IPv6.
 
+```xml
    <?xml version="1.0" encoding="UTF-8"?>
    <config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
      <routing xmlns="urn:ietf:params:xml:ns:yang:ietf-routing">
@@ -1658,12 +1663,13 @@ informative:
        </control-plane-protocols>
      </routing>
    </config>
-
+```
                     Figure 5: Data Model Example in XML
 
    Figure 6 shows the same example configuration for an AMT relay
    service in JSON format.
 
+```json
    {
      "config": {
        "@xmlns": "urn:ietf:params:xml:ns:netconf:base:1.0",
@@ -1695,5 +1701,5 @@ informative:
        }
      }
    }
-
+```
                     Figure 6: Data Model Example in JSON
