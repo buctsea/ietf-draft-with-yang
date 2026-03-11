@@ -382,7 +382,7 @@ informative:
           +--rw relay {amt-relay}?
           |  +--rw addresses
           |  |  +--rw address* [family]
-          |  |     +--rw family             rt:address-family
+          |  |     +--rw family             identityref
           |  |     +--rw anycast-prefix     inet:ip-prefix
           |  |     +--rw local-address      inet:ip-address
           |  +--rw tunnel-limit?            uint32
@@ -1509,7 +1509,7 @@ informative:
           +--rw relay {amt-relay}?
           |  +--rw addresses
           |  |  +--rw address* [family]
-          |  |     +--rw family             rt:address-family
+          |  |     +--rw family             identityref
           |  |     +--rw anycast-prefix     inet:ip-prefix
           |  |     +--rw local-address      inet:ip-address
           |  +--rw tunnel-limit?            uint32
