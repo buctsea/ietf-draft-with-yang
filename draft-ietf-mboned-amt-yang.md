@@ -1491,23 +1491,23 @@ informative:
 
    IANA is requested to register the following URI in the "ns" registry
    within the "IETF XML Registry" group [RFC3688]:
-
+```yang
    URI:  urn:ietf:params:xml:ns:yang:ietf-amt
    Registrant Contact:  The IESG.
    XML:  N/A; the requested URI is an XML namespace.
-
+```
 ##  YANG Module Names Registry
 
    IANA is requested to register the following YANG module in the "YANG
    Module Names" registry [RFC6020] within the "YANG Parameters"
    registry group:
-
+```yang
    Name:  ietf-amt
    Maintained by IANA?  N
    Namespace:  urn:ietf:params:xml:ns:yang:ietf-amt
    Prefix:  amt
    Reference:  RFC XXXX
-
+```
 --- back
 
 #  Appendix A.  Full Tree
