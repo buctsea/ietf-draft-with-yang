@@ -54,6 +54,7 @@ venue:
   latest: https://datatracker.ietf.org/doc/draft-ietf-mboned-amt-yang/
 
 author:
+
  -
     fullname: Yisong Liu
     organization: China Mobile
