@@ -20,20 +20,31 @@
 #
 ###
 title: "A YANG Data Model for Automatic Multicast Tunneling (AMT)"
+
 abbrev: "YANG Data Model for AMT"
+
 category: std
 
 docname: draft-ietf-mboned-amt-yang
+
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
+
 number:06
+
 date:10 March 2026
+
 consensus: true
+
 v: 3
+
 area: General
+
 workgroup: MBONED Working Group
+
 keyword:
  - YANG
  - AMT
+
 venue:
   group: MBONED
   type: Working Group
@@ -47,19 +58,19 @@ author:
     fullname: Yisong Liu
     organization: China Mobile
     email: liuyisong@chinamobile.com
-	
+ -
 	fullname: Changwang Lin
     organization: New H3C Technologies
     email: linchangwang.04414@h3c.com
-	
+ -
 	fullname: Zheng(Sandy) Zhang
     organization: ZTE Corporation
     email: zhang.zheng@zte.com.cn
-	
+ -
 	fullname: Xuesong Geng
     organization: Huawei Technologies
     email:  gengxuesong@huawei.com
-	
+ -
 	fullname: Vinod Kumar Nagaraj
     organization: Juniper Networks
     email:  vinkumar@juniper.net
@@ -126,6 +137,7 @@ normative:
               netmod-rfc8407bis-28, 5 June 2025,
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-28>.
+
 informative:
 
    [RFC4252]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
@@ -256,10 +268,12 @@ informative:
       rotation interval for the private secret (or key) used by a AMT
       Relay to compute Response MAC values, according to Section 5.3.6
       of [RFC7450].
+
 #  Tree Diagrams
 
    Tree diagrams used in this document follow the notation defined in
    [RFC8340].
+
 #  Data Model Overview
 
    The AMT protocol mainly includes two components illustrated in
@@ -312,6 +326,7 @@ informative:
    *  DNS Resource Record (RR) used by an AMT relay service.
 
 #  AMT YANG Module
+
 #  Prefixes
 
    Table 1 summarizes the prefixes used in this document.
@@ -533,6 +548,7 @@ informative:
    received with an invalid IP checksum ('invalid-inner-header-
    checksum'), and the current number of timed-out gateways because of
    inactivity ('gateways-timed-out').
+
 #  Gateway
 
    The structure of 'gateway' is shown in Figure 4.
@@ -580,6 +596,7 @@ informative:
                    +--ro teardown          yang:zero-based-counter64
 
                   Figure 4: AMT Gateway Subtree Structure
+
    The 'gateway' data nodes are described as follows:
 
    'pseudo-interfaces': Indicates the configuration and operational
