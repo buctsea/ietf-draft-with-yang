@@ -46,11 +46,17 @@ keyword:
  - AMT
 
 venue:
+
   group: MBONED
+  
   type: Working Group
+  
   mail: mboned@ietf.org
+  
   arch: https://mailarchive.ietf.org/arch/browse/mboned/
+  
   github: buctsea/ietf-draft-with-yang
+  
   latest: https://datatracker.ietf.org/doc/draft-ietf-mboned-amt-yang/
 
 author:
