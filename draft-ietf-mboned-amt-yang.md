@@ -357,9 +357,9 @@ informative:
           |  ...
           +--rw gateway {amt-gateway}?
              ...
-```
-                    Figure 2: Overall AMT Tree Structure
 
+                    Figure 2: Overall AMT Tree Structure
+```
    The 'amt' container encapsulates all AMT functionality and serves as
    the primary entry point for its configuration and state.  The 'amt'
    container consists of two functional components: the relay and the
@@ -459,9 +459,9 @@ informative:
           |     +--ro discontinuity-time       yang:date-and-time
           +--rw gateway {amt-gateway}?
              ...
-```
-                   Figure 3: AMT Relay Subtree Structure
 
+                   Figure 3: AMT Relay Subtree Structure
+```
    The 'relay' data nodes are described as follows:
 
    'addresses': Indicates the core address configurations for AMT Relay.
@@ -584,9 +584,9 @@ informative:
                    +--ro request           yang:zero-based-counter64
                    +--ro membership-update yang:zero-based-counter64
                    +--ro teardown          yang:zero-based-counter64
-```
-                  Figure 4: AMT Gateway Subtree Structure
 
+                  Figure 4: AMT Gateway Subtree Structure
+```
    The 'gateway' data nodes are described as follows:
 
    'pseudo-interfaces': Indicates the configuration and operational
@@ -1663,9 +1663,9 @@ informative:
        </control-plane-protocols>
      </routing>
    </config>
-```
-                    Figure 5: Data Model Example in XML
 
+                    Figure 5: Data Model Example in XML
+```
    Figure 6 shows the same example configuration for an AMT relay
    service in JSON format.
 
@@ -1701,5 +1701,6 @@ informative:
        }
      }
    }
-```
+
                     Figure 6: Data Model Example in JSON
+```
