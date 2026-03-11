@@ -24,128 +24,84 @@ venue:
   latest: https://datatracker.ietf.org/doc/draft-ietf-mboned-amt-yang/
 
 author:
- -
+  -
     fullname: Yisong Liu
     organization: China Mobile
     email: liuyisong@chinamobile.com
-
+  -
     fullname: Changwang Lin
     organization: New H3C Technologies
     email: linchangwang.04414@h3c.com
-
+  -
     fullname: Zheng(Sandy) Zhang
     organization: ZTE Corporation
     email: zhang.zheng@zte.com.cn
-
+  -
     fullname: Xuesong Geng
     organization: Huawei Technologies
     email:  gengxuesong@huawei.com
-
+  -
     fullname: Vinod Kumar Nagaraj
     organization: Juniper Networks
     email:  vinkumar@juniper.net
 
 normative:
-
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997,
-              <https://www.rfc-editor.org/info/rfc2119>.
-
-   [RFC3688]  Mealling, M., "The IETF XML Registry", BCP 81, RFC 3688,
-              DOI 10.17487/RFC3688, January 2004,
-              <https://www.rfc-editor.org/info/rfc3688>.
-
-   [RFC6020]  Bjorklund, M., Ed., "YANG - A Data Modeling Language for
-              the Network Configuration Protocol (NETCONF)", RFC 6020,
-              DOI 10.17487/RFC6020, October 2010,
-              <https://www.rfc-editor.org/info/rfc6020>.
-
-   [RFC7450]  Bumgardner, G., "Automatic Multicast Tunneling", RFC 7450,
-              DOI 10.17487/RFC7450, February 2015,
-              <https://www.rfc-editor.org/info/rfc7450>.
-
-   [RFC7950]  Bjorklund, M., Ed., "The YANG 1.1 Data Modeling Language",
-              RFC 7950, DOI 10.17487/RFC7950, August 2016,
-              <https://www.rfc-editor.org/info/rfc7950>.
-
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/info/rfc8174>.
-
-   [RFC8294]  Liu, X., Qu, Y., Lindem, A., Hopps, C., and L. Berger,
-              "Common YANG Data Types for the Routing Area", RFC 8294,
-              DOI 10.17487/RFC8294, December 2017,
-              <https://www.rfc-editor.org/info/rfc8294>.
-
-   [RFC8341]  Bierman, A. and M. Bjorklund, "Network Configuration
-              Access Control Model", STD 91, RFC 8341,
-              DOI 10.17487/RFC8341, March 2018,
-              <https://www.rfc-editor.org/info/rfc8341>.
-
-   [RFC8343]  Bjorklund, M., "A YANG Data Model for Interface
-              Management", RFC 8343, DOI 10.17487/RFC8343, March 2018,
-              <https://www.rfc-editor.org/info/rfc8343>.
-
-   [RFC8349]  Lhotka, L., Lindem, A., and Y. Qu, "A YANG Data Model for
-              Routing Management (NMDA Version)", RFC 8349,
-              DOI 10.17487/RFC8349, March 2018,
-              <https://www.rfc-editor.org/info/rfc8349>.
-
-   [RFC8777]  Holland, J., "DNS Reverse IP Automatic Multicast Tunneling
-              (AMT) Discovery", RFC 8777, DOI 10.17487/RFC8777, April
-              2020, <https://www.rfc-editor.org/info/rfc8777>.
-
-   [RFC9911]  Schowalder, J., Ed., "Common YANG Data Types", RFC 9911,
-              DOI 10.17487/RFC9911, December 2025,
-              <https://www.rfc-editor.org/info/rfc9911>.
-
-   [I-D.ietf-netmod-rfc8407bis]
-              Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
-              Authors and Reviewers of Documents Containing YANG Data
-              Models", Work in Progress, Internet-Draft, draft-ietf-
-              netmod-rfc8407bis-28, 5 June 2025,
-              <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
-              rfc8407bis-28>.
-
+  RFC2119:
+  RFC3688:
+  RFC6020:
+  RFC7450:
+  RFC7950:
+  RFC8174:
+  RFC8294:
+  RFC8341:
+  RFC8343:
+  RFC8349:
+  RFC8777:
+  RFC9911:
+  I-D.ietf-netmod-rfc8407bis:
+    title: "Guidelines for Authors and Reviewers of Documents Containing YANG Data Models"
+    seriesinfo:
+      Internet-Draft: draft-ietf-netmod-rfc8407bis-28
+    date: 5 June 2025
+    author:
+      -
+        ins: A. Bierman
+        name: A Bormann
+      -
+        ins: M. Boucadair
+        name: M Boucadair
+      -
+        ins: Q. Wu
+        name: Q Wu
 informative:
-
-   [RFC4252]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
-              Authentication Protocol", RFC 4252, DOI 10.17487/RFC4252,
-              January 2006, <https://www.rfc-editor.org/info/rfc4252>.
-
-   [RFC6241]  Enns, R., Ed., Bjorklund, M., Ed., Schoenwaelder, J., Ed.,
-              and A. Bierman, Ed., "Network Configuration Protocol
-              (NETCONF)", RFC 6241, DOI 10.17487/RFC6241, June 2011,
-              <https://www.rfc-editor.org/info/rfc6241>.
-
-   [RFC7951]  Lhotka, L., "JSON Encoding of Data Modeled with YANG",
-              RFC 7951, DOI 10.17487/RFC7951, August 2016,
-              <https://www.rfc-editor.org/info/rfc7951>.
-
-   [RFC8040]  Bierman, A., Bjorklund, M., and K. Watsen, "RESTCONF
-              Protocol", RFC 8040, DOI 10.17487/RFC8040, January 2017,
-              <https://www.rfc-editor.org/info/rfc8040>.
-
-   [RFC8340]  Bjorklund, M. and L. Berger, Ed., "YANG Tree Diagrams",
-              BCP 215, RFC 8340, DOI 10.17487/RFC8340, March 2018,
-              <https://www.rfc-editor.org/info/rfc8340>.
-
-   [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
-              Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
-              <https://www.rfc-editor.org/info/rfc8446>.
-
-   [RFC9000]  Iyengar, J., Ed. and M. Thomson, Ed., "QUIC: A UDP-Based
-              Multiplexed and Secure Transport", RFC 9000,
-              DOI 10.17487/RFC9000, May 2021,
-              <https://www.rfc-editor.org/info/rfc9000>.
-
-   [W3C.REC-xml-20081126]
-              Bray, T., Paoli, J., Sperberg-McQueen, M., Maler, E., and
-              F. Yergeau, "Extensible Markup Language (XML) 1.0 (Fifth
-              Edition)", World Wide Web Consortium Recommendation REC-
-              xml-20081126, November 2008,
-              <https://www.w3.org/TR/2008/REC-xml-20081126>.
+  RFC4252:
+  RFC6241:
+  RFC7951:
+  RFC8040:
+  RFC8340:
+  RFC8446:
+  RFC9000:
+  W3C.REC-xml-20081126:
+    title: "Extensible Markup Language (XML) 1.0 (Fifth Edition)"
+    seriesinfo:
+      World Wide Web Consortium Recommendation REC-xml-20081126
+    date: November 2008
+    author:
+      -
+        ins: T. Bray
+        name: T Bray
+      -
+        ins: J. Paoli
+        name: J Paoli
+      -
+        ins: M. Sperberg-McQueen
+        name: M Sperberg-McQueen
+      -
+        ins: E. Maler
+        name: E Maler
+      -
+        ins: F. Yergeau
+        name: F Yergeau
 
 
 
