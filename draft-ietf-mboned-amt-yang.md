@@ -25,22 +25,27 @@ venue:
 
 author:
   -
+    ins: Y. Liu
     fullname: Yisong Liu
     organization: China Mobile
     email: liuyisong@chinamobile.com
 
+    ins: C. Lin
     fullname: Changwang Lin
     organization: New H3C Technologies
     email: linchangwang.04414@h3c.com
 
+    ins: Z. Zhang
     fullname: Zheng(Sandy) Zhang
     organization: ZTE Corporation
     email: zhang.zheng@zte.com.cn
 
+    ins: X. Geng
     fullname: Xuesong Geng
     organization: Huawei Technologies
     email:  gengxuesong@huawei.com
 
+    ins: V. Kumar Nagaraj
     fullname: Vinod Kumar Nagaraj
     organization: Juniper Networks
     email:  vinkumar@juniper.net
