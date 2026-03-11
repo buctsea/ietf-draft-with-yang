@@ -334,7 +334,7 @@ informative:
    routing" specified in [RFC8349].  Specifically, the AMT YANG module
    augments "/rt:routing/rt:control-plane-protocols".
 
-```yang
+```text
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
@@ -370,7 +370,7 @@ informative:
 
    The structure of 'relay' is shown in Figure 3.
 
-```yang
+```text
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
@@ -527,7 +527,7 @@ informative:
 
    The structure of 'gateway' is shown in Figure 4.
 
-```yang
+```text
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
@@ -1476,7 +1476,7 @@ informative:
 
    IANA is requested to register the following URI in the "ns" registry
    within the "IETF XML Registry" group [RFC3688]:
-```yang
+```text
    URI:  urn:ietf:params:xml:ns:yang:ietf-amt
    Registrant Contact:  The IESG.
    XML:  N/A; the requested URI is an XML namespace.
@@ -1486,7 +1486,7 @@ informative:
    IANA is requested to register the following YANG module in the "YANG
    Module Names" registry [RFC6020] within the "YANG Parameters"
    registry group:
-```yang
+```text
    Name:  ietf-amt
    Maintained by IANA?  N
    Namespace:  urn:ietf:params:xml:ns:yang:ietf-amt
@@ -1497,7 +1497,7 @@ informative:
 
 # Appendix A.  Full Tree
 
-```yang
+```text
    module: ietf-amt
      augment /rt:routing/rt:control-plane-protocols:
        +--rw amt!
