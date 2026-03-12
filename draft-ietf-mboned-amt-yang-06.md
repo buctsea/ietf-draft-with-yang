@@ -3,7 +3,7 @@ coding: utf-8
 
 title: A YANG Data Model for Automatic Multicast Tunneling (AMT)
 abbrev: YANG Data Model for AMT
-docname: draft-ietf-mboned-amt-yang-06
+docname: draft-ietf-mboned-amt-yang-06-latest
 category: std
 
 standalone: yes
