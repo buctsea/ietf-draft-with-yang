@@ -710,7 +710,15 @@ module ietf-amt {
                to the same address family indicated by the 'family'.
                Any mismatch is an indication of abnormal
                configurations and is therefore allowed to be
-               reported..";
+               reported.
+               
+               The 'anycast-prefix' serve as the discovery entry
+               for AMT relays, while unicast IP addresses
+               'local-address' are the actual communication entities
+               of AMT relays. The AMT gateway first locates the AMT
+               relay via the 'anycast-prefix' and then uses its
+               'local-address' to complete all subsequent AMT
+               interactions.";
             leaf family {
               type identityref {
                 base rt:address-family;
@@ -730,7 +738,7 @@ module ietf-amt {
                  
                  Any mismatch is an indication of abnormal
                  configurations and is therefore allowed to be
-                 reported..";
+                 reported.";
             }
             leaf local-address {
               type inet:ip-address;
@@ -744,7 +752,7 @@ module ietf-amt {
                  
                  Any mismatch is an indication of abnormal
                  configurations and is therefore allowed to be
-                 reported..";
+                 reported.";
             }
           }
         }
