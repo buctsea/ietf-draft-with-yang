@@ -3,7 +3,7 @@ coding: utf-8
 
 title: A YANG Data Model for Automatic Multicast Tunneling (AMT)
 abbrev: YANG Data Model for AMT
-docname: draft-ietf-mboned-amt-yang-06-latest
+docname: draft-ietf-mboned-amt-yang-06
 category: std
 
 standalone: yes
@@ -86,7 +86,7 @@ informative:
     refcontent: World Wide Web Consortium Recommendation REC-xml-20081126
     target: https://www.w3.org/TR/2008/REC-xml-20081126
   I-D.ietf-netmod-rfc8407bis:
-
+  I-D.ietf-netconf-udp-client-server:
 --- abstract
 
    This document defines a YANG data model for the management of
@@ -424,7 +424,13 @@ module: ietf-amt
    any one or more of the tunnel's counters suffered a discontinuity
    ('discontinuity-time'). Each multicast flow information ('flow') has
    multicast source address ('source-address') and multicast group
-   address ('group-address').
+   address ('group-address'). The four data nodes ('gateway-address',
+   'gateway-port', 'local-address', and 'local-port) here do not reuse
+   the standard "udp-client" grouping defined in {{I-D.ietf-netconf-udp-client-server}}
+   because AMT requires the gateway to be a specific IP address (inet:ip-address),
+   while the standard "udp-client" grouping allows the use of domain names (inet:host).
+   Reuse could lead to configuration errors or runtime risks, so a custom structure
+   must be defined to enforce this constraint.
 
    'relay-message-statistics': Indicates various messages and error
    statistics handled by AMT relay.
@@ -1315,6 +1321,46 @@ module ietf-amt {
 }
 ~~~~
 {: sourcecode-markers="true" sourcecode-name="ietf-amt@2026-03-10.yang"}
+
+# Operational Considerations
+
+   This document specifies a YANG data model for AMT that configures and monitors
+   address parameters for both Relay and Gateway functions. Operational deployments
+   MUST monitor for address family mismatches between associated address parameters
+   to ensure correct protocol operation, tunnel establishment, and forwarding behavior.
+
+   The following address pairs and combinations are critical and MUST be validated
+   for address family consistency:
+
+   * On the AMT Relay:
+
+     Within the 'relay/addresses/address' list entry indexed by a given address
+     family ('family'):
+
+     * The 'anycast-prefix' (discovery anycast prefix)
+     * The 'local-address' (unicast IP address)
+
+     This addresses MUST belong to the same address family indicated by the 'family'
+     leaf (either both IPv4 or both IPv6). A mismatch (e.g., IPv4 'anycast-prefix' paired
+     with IPv6 'local-address' under the same IPv4 'family' entry) indicates a configuration
+     anomaly that can prevent Relay discovery, Advertisement responses, and tunnel setup.
+
+   * On the AMT Gateway:
+
+     Within each 'gateway/pseudo-interfaces/interface' entry:
+
+     * The 'relay-discovery-address'
+     * The 'relay-address'
+     * The 'local-address' (operational state)
+
+     This addresses MUST all belong to the same address family. A mismatch can lead to
+     failure in Relay discovery, tunnel establishment, or traffic decapsulation.
+
+   Network operators SHOULD implement configuration validation and operational monitoring
+   to detect such address family mismatches. When detected, the device MUST log an appropriate
+   error or alarm, and MAY prevent the inconsistent configuration from being applied.
+   Corrective actions include reconfiguring the affected addresses to match the intended address
+   family and verifying routing reachability for the configured addresses.
 
 # Security Considerations
 

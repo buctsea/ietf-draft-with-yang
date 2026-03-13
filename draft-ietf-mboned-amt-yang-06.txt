@@ -5,14 +5,14 @@
 MBONED Working Group                                              Y. Liu
 Internet-Draft                                              China Mobile
 Intended status: Standards Track                                  C. Lin
-Expires: 13 September 2026                          New H3C Technologies
+Expires: 14 September 2026                          New H3C Technologies
                                                                 Z. Zhang
                                                          ZTE Corporation
                                                                  X. Geng
                                                      Huawei Technologies
                                                         V. Kumar Nagaraj
                                                         Juniper Networks
-                                                           12 March 2026
+                                                           13 March 2026
 
 
        A YANG Data Model for Automatic Multicast Tunneling (AMT)
@@ -38,7 +38,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 13 September 2026.
+   This Internet-Draft will expire on 14 September 2026.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Liu, et al.             Expires 13 September 2026               [Page 1]
+Liu, et al.             Expires 14 September 2026               [Page 1]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -77,16 +77,17 @@ Table of Contents
        4.2.2.  Relay . . . . . . . . . . . . . . . . . . . . . . . .   7
        4.2.3.  Gateway . . . . . . . . . . . . . . . . . . . . . . .  10
      4.3.  YANG Module . . . . . . . . . . . . . . . . . . . . . . .  12
-   5.  Security Considerations . . . . . . . . . . . . . . . . . . .  29
-   6.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  30
-     6.1.  IETF XML Registry . . . . . . . . . . . . . . . . . . . .  31
-     6.2.  YANG Module Names Registry  . . . . . . . . . . . . . . .  31
-   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  31
-     7.1.  Normative References  . . . . . . . . . . . . . . . . . .  31
-     7.2.  Informative References  . . . . . . . . . . . . . . . . .  32
-   Appendix A.  Full Tree  . . . . . . . . . . . . . . . . . . . . .  33
-   Appendix B.  Data Model Example . . . . . . . . . . . . . . . . .  36
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  37
+   5.  Operational Considerations  . . . . . . . . . . . . . . . . .  29
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .  30
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .  31
+     7.1.  IETF XML Registry . . . . . . . . . . . . . . . . . . . .  32
+     7.2.  YANG Module Names Registry  . . . . . . . . . . . . . . .  32
+   8.  References  . . . . . . . . . . . . . . . . . . . . . . . . .  32
+     8.1.  Normative References  . . . . . . . . . . . . . . . . . .  32
+     8.2.  Informative References  . . . . . . . . . . . . . . . . .  33
+   Appendix A.  Full Tree  . . . . . . . . . . . . . . . . . . . . .  34
+   Appendix B.  Data Model Example . . . . . . . . . . . . . . . . .  37
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  38
 
 1.  Introduction
 
@@ -103,16 +104,19 @@ Table of Contents
 
    This document defines a YANG data model for managing AMT protocol.
 
-   RFC Ed.: Please replace all occurrences of 'XXXX' with the actual RFC
-   number (and remove this note).  Also, please update the revision date
-   to match the publication date.
 
 
 
-Liu, et al.             Expires 13 September 2026               [Page 2]
+
+
+Liu, et al.             Expires 14 September 2026               [Page 2]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
+
+   RFC Ed.: Please replace all occurrences of 'XXXX' with the actual RFC
+   number (and remove this note).  Also, please update the revision date
+   to match the publication date.
 
 2.  Terminology & Notation Conventions
 
@@ -154,21 +158,23 @@ Internet-Draft           YANG Data Model for AMT              March 2026
       this traffic through established AMT tunnels to requesting
       Gateways.
 
+
+
+
+
+
+
+
+Liu, et al.             Expires 14 September 2026               [Page 3]
+
+Internet-Draft           YANG Data Model for AMT              March 2026
+
+
    *  Tunnel: A unidirectional, UDP-based encapsulation tunnel
       established between an AMT Gateway (the tunnel head) and an AMT
       Relay (the tunnel tail).  It is used to transport multicast
       packets from the Relay to the Gateway over networks that do not
       support native IP multicast.
-
-
-
-
-
-
-Liu, et al.             Expires 13 September 2026               [Page 3]
-
-Internet-Draft           YANG Data Model for AMT              March 2026
-
 
    *  Pseudo-Interface: A logical interface within the AMT Gateway or
       Relay that represents the endpoint of an AMT tunnel.  Multicast
@@ -215,13 +221,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-
-
-
-
-
-
-Liu, et al.             Expires 13 September 2026               [Page 4]
+Liu, et al.             Expires 14 September 2026               [Page 4]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -277,7 +277,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026               [Page 5]
+Liu, et al.             Expires 14 September 2026               [Page 5]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -333,7 +333,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026               [Page 6]
+Liu, et al.             Expires 14 September 2026               [Page 6]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -389,7 +389,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026               [Page 7]
+Liu, et al.             Expires 14 September 2026               [Page 7]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -445,7 +445,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026               [Page 8]
+Liu, et al.             Expires 14 September 2026               [Page 8]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -485,27 +485,6 @@ Internet-Draft           YANG Data Model for AMT              March 2026
    discovery address ('discovery-address'), and the wire-encoded domain
    name of AMT relay ('domain-name').
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Liu, et al.             Expires 13 September 2026               [Page 9]
-
-Internet-Draft           YANG Data Model for AMT              March 2026
-
-
    'tunnels': Indicates tunnel information from various AMT gateways
    connected to this AMT relay.  Each tunnel entry ('tunnel') includes
    the IP address and port number of the tunnel opposite end ('gateway')
@@ -519,8 +498,23 @@ Internet-Draft           YANG Data Model for AMT              March 2026
    and 'membership-update- message-count'), and the time on the most
    recent occasion at which any one or more of the tunnel's counters
    suffered a discontinuity ('discontinuity-time').  Each multicast flow
+
+
+
+Liu, et al.             Expires 14 September 2026               [Page 9]
+
+Internet-Draft           YANG Data Model for AMT              March 2026
+
+
    information ('flow') has multicast source address ('source-address')
-   and multicast group address ('group-address').
+   and multicast group address ('group-address').  The four data nodes
+   ('gateway-address', 'gateway-port', 'local-address', and 'local-port)
+   here do not reuse the standard "udp-client" grouping defined in
+   [I-D.ietf-netconf-udp-client-server] because AMT requires the gateway
+   to be a specific IP address (inet:ip-address), while the standard
+   "udp-client" grouping allows the use of domain names (inet:host).
+   Reuse could lead to configuration errors or runtime risks, so a
+   custom structure must be defined to enforce this constraint.
 
    'relay-message-statistics': Indicates various messages and error
    statistics handled by AMT relay.
@@ -557,7 +551,13 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 10]
+
+
+
+
+
+
+Liu, et al.             Expires 14 September 2026              [Page 10]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -613,7 +613,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 11]
+Liu, et al.             Expires 14 September 2026              [Page 11]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -669,7 +669,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 12]
+Liu, et al.             Expires 14 September 2026              [Page 12]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -725,7 +725,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 13]
+Liu, et al.             Expires 14 September 2026              [Page 13]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -781,7 +781,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 14]
+Liu, et al.             Expires 14 September 2026              [Page 14]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -837,7 +837,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 15]
+Liu, et al.             Expires 14 September 2026              [Page 15]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -893,7 +893,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 16]
+Liu, et al.             Expires 14 September 2026              [Page 16]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -949,7 +949,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 17]
+Liu, et al.             Expires 14 September 2026              [Page 17]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1005,7 +1005,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 18]
+Liu, et al.             Expires 14 September 2026              [Page 18]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1061,7 +1061,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 19]
+Liu, et al.             Expires 14 September 2026              [Page 19]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1117,7 +1117,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 20]
+Liu, et al.             Expires 14 September 2026              [Page 20]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1173,7 +1173,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 21]
+Liu, et al.             Expires 14 September 2026              [Page 21]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1229,7 +1229,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 22]
+Liu, et al.             Expires 14 September 2026              [Page 22]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1285,7 +1285,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 23]
+Liu, et al.             Expires 14 September 2026              [Page 23]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1341,7 +1341,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 24]
+Liu, et al.             Expires 14 September 2026              [Page 24]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1397,7 +1397,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 25]
+Liu, et al.             Expires 14 September 2026              [Page 25]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1453,7 +1453,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 26]
+Liu, et al.             Expires 14 September 2026              [Page 26]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1509,7 +1509,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 27]
+Liu, et al.             Expires 14 September 2026              [Page 27]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1565,7 +1565,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 28]
+Liu, et al.             Expires 14 September 2026              [Page 28]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1588,7 +1588,63 @@ Internet-Draft           YANG Data Model for AMT              March 2026
    }
    <CODE ENDS>
 
-5.  Security Considerations
+5.  Operational Considerations
+
+   This document specifies a YANG data model for AMT that configures and
+   monitors address parameters for both Relay and Gateway functions.
+   Operational deployments MUST monitor for address family mismatches
+   between associated address parameters to ensure correct protocol
+   operation, tunnel establishment, and forwarding behavior.
+
+   The following address pairs and combinations are critical and MUST be
+   validated for address family consistency:
+
+   *  On the AMT Relay:
+
+      Within the 'relay/addresses/address' list entry indexed by a given
+      address family ('family'):
+
+      -  The 'anycast-prefix' (discovery anycast prefix)
+
+      -  The 'local-address' (unicast IP address)
+
+      This addresses MUST belong to the same address family indicated by
+      the 'family' leaf (either both IPv4 or both IPv6).  A mismatch
+      (e.g., IPv4 'anycast-prefix' paired with IPv6 'local-address'
+      under the same IPv4 'family' entry) indicates a configuration
+      anomaly that can prevent Relay discovery, Advertisement responses,
+      and tunnel setup.
+
+   *  On the AMT Gateway:
+
+      Within each 'gateway/pseudo-interfaces/interface' entry:
+
+
+
+Liu, et al.             Expires 14 September 2026              [Page 29]
+
+Internet-Draft           YANG Data Model for AMT              March 2026
+
+
+      -  The 'relay-discovery-address'
+
+      -  The 'relay-address'
+
+      -  The 'local-address' (operational state)
+
+      This addresses MUST all belong to the same address family.  A
+      mismatch can lead to failure in Relay discovery, tunnel
+      establishment, or traffic decapsulation.
+
+   Network operators SHOULD implement configuration validation and
+   operational monitoring to detect such address family mismatches.
+   When detected, the device MUST log an appropriate error or alarm, and
+   MAY prevent the inconsistent configuration from being applied.
+   Corrective actions include reconfiguring the affected addresses to
+   match the intended address family and verifying routing reachability
+   for the configured addresses.
+
+6.  Security Considerations
 
    This section is modeled after the template described in Section 3.7.1
    of [I-D.ietf-netmod-rfc8407bis].
@@ -1621,7 +1677,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 29]
+Liu, et al.             Expires 14 September 2026              [Page 30]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1672,17 +1728,17 @@ Internet-Draft           YANG Data Model for AMT              March 2026
       disclose operational state information about the AMT relay or AMT
       gateway on this device.
 
-6.  IANA Considerations
+7.  IANA Considerations
 
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 30]
+Liu, et al.             Expires 14 September 2026              [Page 31]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
 
-6.1.  IETF XML Registry
+7.1.  IETF XML Registry
 
    IANA is requested to register the following URI in the "ns" registry
    within the "IETF XML Registry" group [RFC3688]:
@@ -1691,7 +1747,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
       Registrant Contact:  The IESG.
       XML:  N/A; the requested URI is an XML namespace.
 
-6.2.  YANG Module Names Registry
+7.2.  YANG Module Names Registry
 
    IANA is requested to register the following YANG module in the "YANG
    Module Names" registry [RFC6020] within the "YANG Parameters"
@@ -1703,9 +1759,9 @@ Internet-Draft           YANG Data Model for AMT              March 2026
       Prefix:  amt
       Reference:  RFC XXXX
 
-7.  References
+8.  References
 
-7.1.  Normative References
+8.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -1733,7 +1789,7 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 31]
+Liu, et al.             Expires 14 September 2026              [Page 32]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
@@ -1769,7 +1825,14 @@ Internet-Draft           YANG Data Model for AMT              March 2026
               DOI 10.17487/RFC9911, December 2025,
               <https://www.rfc-editor.org/info/rfc9911>.
 
-7.2.  Informative References
+8.2.  Informative References
+
+   [I-D.ietf-netconf-udp-client-server]
+              Feng, A. H., Francois, P., and K. Watsen, "YANG Groupings
+              for UDP Clients and UDP Servers", Work in Progress,
+              Internet-Draft, draft-ietf-netconf-udp-client-server-10,
+              16 December 2025, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-netconf-udp-client-server-10>.
 
    [I-D.ietf-netmod-rfc8407bis]
               Bierman, A., Boucadair, M., and Q. Wu, "Guidelines for
@@ -1779,20 +1842,17 @@ Internet-Draft           YANG Data Model for AMT              March 2026
               <https://datatracker.ietf.org/doc/html/draft-ietf-netmod-
               rfc8407bis-28>.
 
-   [RFC4252]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
-              Authentication Protocol", RFC 4252, DOI 10.17487/RFC4252,
-              January 2006, <https://www.rfc-editor.org/info/rfc4252>.
 
 
 
-
-
-
-
-Liu, et al.             Expires 13 September 2026              [Page 32]
+Liu, et al.             Expires 14 September 2026              [Page 33]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
+
+   [RFC4252]  Ylonen, T. and C. Lonvick, Ed., "The Secure Shell (SSH)
+              Authentication Protocol", RFC 4252, DOI 10.17487/RFC4252,
+              January 2006, <https://www.rfc-editor.org/info/rfc4252>.
 
    [RFC6241]  Enns, R., Ed., Bjorklund, M., Ed., Schoenwaelder, J., Ed.,
               and A. Bierman, Ed., "Network Configuration Protocol
@@ -1838,18 +1898,18 @@ Appendix A.  Full Tree
           |  |     +--rw family             identityref
           |  |     +--rw anycast-prefix     inet:ip-prefix
           |  |     +--rw local-address      inet:ip-address
-          |  +--rw tunnel-limit?            uint32
-          |  +--rw secret-key-timeout?      uint32
-          |  +--rw relay-dns-resource-records
-          |  |  +--rw record* [source-address]
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 33]
+Liu, et al.             Expires 14 September 2026              [Page 34]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
 
+          |  +--rw tunnel-limit?            uint32
+          |  +--rw secret-key-timeout?      uint32
+          |  +--rw relay-dns-resource-records
+          |  |  +--rw record* [source-address]
           |  |     +--rw source-address         inet:ip-address
           |  |     +--rw precedence?            uint32
           |  |     +--rw d-bit?                 boolean
@@ -1894,18 +1954,18 @@ Internet-Draft           YANG Data Model for AMT              March 2026
           |     |  +--ro invalid-relay-discovery-address
           |     |  |                           yang:zero-based-counter64
           |     |  +--ro invalid-membership-request-address
-          |     |  |                           yang:zero-based-counter64
-          |     |  +--ro invalid-membership-update-address
-          |     |  |                           yang:zero-based-counter64
-          |     |  +--ro incomplete-relay-discovery-messages
 
 
 
-Liu, et al.             Expires 13 September 2026              [Page 34]
+Liu, et al.             Expires 14 September 2026              [Page 35]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
 
+          |     |  |                           yang:zero-based-counter64
+          |     |  +--ro invalid-membership-update-address
+          |     |  |                           yang:zero-based-counter64
+          |     |  +--ro incomplete-relay-discovery-messages
           |     |  |                           yang:zero-based-counter64
           |     |  +--ro incomplete-membership-request-messages
           |     |  |                           yang:zero-based-counter64
@@ -1950,17 +2010,17 @@ Internet-Draft           YANG Data Model for AMT              March 2026
                 |  +--ro membership-query yang:zero-based-counter64
                 +--ro sent
                    +--ro relay-discovery yang:zero-based-counter64
-                   +--ro request           yang:zero-based-counter64
-                   +--ro membership-update yang:zero-based-counter64
-                   +--ro teardown          yang:zero-based-counter64
 
 
 
-
-Liu, et al.             Expires 13 September 2026              [Page 35]
+Liu, et al.             Expires 14 September 2026              [Page 36]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
+
+                   +--ro request           yang:zero-based-counter64
+                   +--ro membership-update yang:zero-based-counter64
+                   +--ro teardown          yang:zero-based-counter64
 
 Appendix B.  Data Model Example
 
@@ -2006,17 +2066,16 @@ Appendix B.  Data Model Example
 
                     Figure 5: Data Model Example in XML
 
-   Figure 6 shows the same example configuration for an AMT relay
-   service in JSON format.
 
 
 
-
-
-Liu, et al.             Expires 13 September 2026              [Page 36]
+Liu, et al.             Expires 14 September 2026              [Page 37]
 
 Internet-Draft           YANG Data Model for AMT              March 2026
 
+
+   Figure 6 shows the same example configuration for an AMT relay
+   service in JSON format.
 
    {
      "ietf-routing:routing": {
@@ -2061,17 +2120,20 @@ Authors' Addresses
    Email: linchangwang.04414@h3c.com
 
 
+
+
+
+
+
+Liu, et al.             Expires 14 September 2026              [Page 38]
+
+Internet-Draft           YANG Data Model for AMT              March 2026
+
+
    Zheng(Sandy) Zhang
    ZTE Corporation
    China
    Email: zhang.zheng@zte.com.cn
-
-
-
-
-Liu, et al.             Expires 13 September 2026              [Page 37]
-
-Internet-Draft           YANG Data Model for AMT              March 2026
 
 
    Xuesong Geng
@@ -2119,10 +2181,4 @@ Internet-Draft           YANG Data Model for AMT              March 2026
 
 
 
-
-
-
-
-
-
-Liu, et al.             Expires 13 September 2026              [Page 38]
+Liu, et al.             Expires 14 September 2026              [Page 39]
