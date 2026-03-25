@@ -471,7 +471,6 @@ module: ietf-amt
 ~~~~
 {: #fig-stats-subtree title="AMT Relay Statistics Subtree Structure"}
 
-
 ### Gateway
 
    The structure of 'gateway' is shown in {{fig-gateway-subtree}}.
