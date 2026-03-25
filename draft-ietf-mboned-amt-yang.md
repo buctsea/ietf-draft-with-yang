@@ -7,12 +7,12 @@ docname: draft-ietf-mboned-amt-yang-latest
 category: std
 
 standalone: yes
-submissiontype: IETF 
+submissiontype: IETF
 pi: [toc, sortrefs, symrefs, comments]
 
 ipr: trust200902
 area: Ops
-wg: MBONED Working Group 
+wg: MBONED Working Group
 kw: YANG, AMT
 
 author:
@@ -362,7 +362,7 @@ module: ietf-amt
    discovery address ('discovery-address'), and the wire-encoded domain
    name of AMT relay ('domain-name').
 
-   'tunnels' ({fig-tunnel-subtree}):
+   'tunnels' ({{fig-tunnel-subtree}}):
    : Indicates tunnel information from various AMT gateways
    connected to this AMT relay.
    : Each tunnel entry ('tunnel') includes
@@ -380,7 +380,7 @@ module: ietf-amt
    : Each multicast flow information ('flow') has
    multicast source address ('source-address') and multicast group
    address ('group-address').
-   
+
    > Design note: The four data nodes ('gateway-address',
    > 'gateway-port', 'local-address', and 'local-port) do not reuse
    > the standard "udp-client" grouping defined in {{I-D.ietf-netconf-udp-client-server}}
@@ -469,7 +469,7 @@ module: ietf-amt
           ...
 ~~~~
 {: #fig-stats-subtree title="AMT Relay Statistics Subtree Structure"}
-   
+
 
 ### Gateway
 
@@ -559,7 +559,7 @@ module: ietf-amt
    address parameters for both Relay and Gateway functions. Operators
    MUST monitor for address family mismatches between associated address parameters
    to ensure correct protocol operation, tunnel establishment, and forwarding behavior.
-   
+
    The following address pairs and combinations are critical and MUST be validated
    for address family consistency:
 
@@ -620,27 +620,27 @@ module: ietf-amt
    sensitivities/vulnerabilities:
 
       Under /rt:routing/rt:control-plane-protocols/rt:control-plane-
-      protocol/: Unauthorized access to any data nodes in these subtrees can
-      adversely affect the AMT subsystem of both the local device and
+      protocol/: Unauthorized access to any data nodes in these subtrees
+      can adversely affect the AMT subsystem of both the local device and
       the network. This may lead to network malfunctions, delivery of
       packets to inappropriate destinations, and other problems.
 
-         amt/relay/addresses/address: 
-         : This subtree specifies the IPv4 or IPv6 address information for an
-           AMT relay. Modifying the configuration may cause the AMT tunnel
-           to be torn down or established.
+         amt/relay/addresses/address:
+         : This subtree specifies the IPv4 or IPv6 address information
+           for an AMT relay. Modifying the configuration may cause the
+           AMT tunnel to be torn down or established.
 
-         amt/relay/relay-dns-resource-records/record: 
-         : This subtree specifies the DNS RR configuration used to discover
-           AMT relays. Modifying this configuration may cause the AMT
-           gateway to discover new AMT relay devices, or fail to discover AMT
-           relay devices.
+         amt/relay/relay-dns-resource-records/record:
+         : This subtree specifies the DNS RR configuration used to
+           discover AMT relays. Modifying this configuration may cause
+           the AMT gateway to discover new AMT relay devices, or fail to
+           discover AMT relay devices.
 
          amt/gateway/pseudo-interfaces/interface:
-         : This subtree specifies the parameters of AMT pseudo-interface for
-           an AMT gateway. Modifying this configuration may cause the AMT
-           gateway to establish or tear down tunnels with multiple AMT
-           relays.
+         : This subtree specifies the parameters of AMT pseudo-interface
+           for an AMT gateway. Modifying this configuration may cause the
+           AMT gateway to establish or tear down tunnels with multiple
+           AMT relays.
 
    Some of the readable data nodes in this YANG module may be considered
    sensitive or vulnerable in some network environments. It is thus
@@ -650,9 +650,9 @@ module: ietf-amt
    vulnerabilities:
 
        Under /rt:routing/rt:control-plane-protocols/rt:control-plane-
-       protocol/: amt/relay and amt/gateway. Unauthorized access to any data nodes in these subtrees can
-       disclose operational state information about the AMT relay or AMT
-       gateway on this device.
+       protocol/: amt/relay and amt/gateway. Unauthorized access to any
+       data nodes in these subtrees can disclose operational state
+       information about the AMT relay or AMT gateway on this device.
 
 # IANA Considerations
 
@@ -680,6 +680,10 @@ module: ietf-amt
    Prefix:  amt
    Reference:  RFC XXXX
 ~~~~
+
+# Acknowledgments
+
+Thanks to Mohamed Boucadair for review and comments.
 
 --- back
 
